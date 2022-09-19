@@ -4,14 +4,14 @@ Aplikasi Presensi untuk Pegawai KPPN Kota Tasikmalaya
 -Tim Mazjunun
 
 ## To-do List
-- [ ] Database
+- [x] Database
   - [x] users
   - [x] pegawai
-  - [ ] presensi
+  - [x] presensi
 - [x] Front-end
   - [x] Halaman Admin
-  - [ ] Halaman Pegawai
-  - [ ] Routing URL
+  - [x] Halaman Peserta
+  - [x] Routing URL
 - [ ] Back-end
   - [ ] Koneksi DB
   - [ ] Auth
