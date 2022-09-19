@@ -1,13 +1,25 @@
 <?php
-if($_GET['nav'] == "home") {
+if($_GET['nav'] == "home" || empty($_GET['nav'])) {
   include('./pages/dashboard.php');
+}
+else if($_GET['nav'] == "sign-out") {
+  session_destroy();
+  header("Location: /");
 }
 else if($_GET['nav'] == "presensi") {
   include('./pages/presensi.php');
 }
 else if($_GET['nav'] == "peserta") {
-  include('./pages/peserta.php');
+  if($_SESSION['level'] == 'admin') {
+    include('./pages/peserta.php');
+  } else {
+    header("Location: /");
+  }
 }
 else if($_GET['nav'] == "tambah-peserta") {
-  include('./pages/tambah-peserta.php');
+  if($_SESSION['level'] == 'admin') {
+    include('./pages/tambah-peserta.php');
+  } else {
+    header("Location: /");
+  }
 }

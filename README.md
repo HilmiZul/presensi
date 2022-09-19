@@ -12,8 +12,8 @@ Aplikasi Presensi untuk Pegawai KPPN Kota Tasikmalaya
   - [x] Halaman Admin
   - [x] Halaman Peserta
   - [x] Routing URL
-- [ ] Back-end
-  - [ ] Koneksi DB
+- [x] Back-end
+  - [x] Koneksi DB
   - [ ] Auth
     - [ ] Login
     - [ ] Logout
