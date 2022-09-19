@@ -3,8 +3,8 @@
     <div class="nav">
       <!-- <div class="sb-sidenav-menu-heading">Core</div> -->
       <a class="nav-link" href="/">
-        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-        Dashboard
+        <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+        Home
       </a>
       
       <?php if($_SESSION['level'] == "peserta") { ?>
@@ -28,17 +28,17 @@
       </div>
       <?php } ?>
 
-      <a class="nav-link" href="report.html">
+      <a class="nav-link" href="?nav=report">
         <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
         Report
       </a>
 
-      <a class="nav-link" href="users.html">
+      <a class="nav-link" href="?nav=users">
         <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
         Users
       </a>
 
-      <a class="nav-link" href="pengaturan.html">
+      <a class="nav-link" href="?nav=pengaturan">
         <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
         Pengaturan
       </a>

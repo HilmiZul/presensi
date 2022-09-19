@@ -14,9 +14,9 @@ Aplikasi Presensi untuk Pegawai KPPN Kota Tasikmalaya
   - [x] Routing URL
 - [x] Back-end
   - [x] Koneksi DB
-  - [ ] Auth
-    - [ ] Login
-    - [ ] Logout
+  - [x] Auth
+    - [x] Login
+    - [x] Logout
   - [ ] Function Presensi
   - [ ] Function `Pegawai`
     - [ ] Tambah
