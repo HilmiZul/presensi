@@ -33,10 +33,19 @@
         Report
       </a>
 
-      <a class="nav-link" href="?nav=users">
+      <?php if($_SESSION['level'] == "admin") { ?>
+      <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#users" aria-expanded="false" aria-controls="collapseLayouts">
         <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
         Users
+        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
       </a>
+      <div class="collapse" id="users" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+        <nav class="sb-sidenav-menu-nested nav">
+          <a class="nav-link" href="?nav=tambah-user">Tambah User</a>
+          <a class="nav-link" href="?nav=user">Semua User</a>
+        </nav>
+      </div>
+      <?php } ?>
 
       <a class="nav-link" href="?nav=pengaturan">
         <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>

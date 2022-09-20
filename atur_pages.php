@@ -16,9 +16,9 @@ else if($_GET['nav'] == "peserta") {
     header("Location: /");
   }
 }
-else if($_GET['nav'] == "tambah-peserta") {
+else if($_GET['nav'] == "tambah-user") {
   if($_SESSION['level'] == 'admin') {
-    include('./pages/tambah-peserta.php');
+    include('./pages/tambah-user.php');
   } else {
     header("Location: /");
   }
