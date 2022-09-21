@@ -28,11 +28,6 @@
       </div>
       <?php } ?>
 
-      <a class="nav-link" href="?nav=report">
-        <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-        Report
-      </a>
-
       <?php if($_SESSION['level'] == "admin") { ?>
       <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#users" aria-expanded="false" aria-controls="collapseLayouts">
         <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
@@ -46,6 +41,11 @@
         </nav>
       </div>
       <?php } ?>
+
+      <a class="nav-link" href="?nav=report">
+        <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+        Report
+      </a>
 
       <a class="nav-link" href="?nav=pengaturan">
         <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
