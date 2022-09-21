@@ -51,3 +51,9 @@ else if($_GET['nav'] == "ubah-user") {
     header("Location: /");
   }
 }
+else if($_GET['nav'] == "isi-presensi") {
+  include("./pages/isi-presensi.php");
+}
+else if($_GET['nav'] == "simpan-presensi") {
+  include("./pages/simpan-presensi.php");
+}

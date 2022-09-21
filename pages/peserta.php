@@ -2,7 +2,7 @@
 // HAPUS DISINI. GAPAPA YANG PENTING KEHAPUS 😅
 $id = $_GET['hapus'];
 if(!empty($id)) {
-  $result = mysqli_query($db, "delete from tb_peserta where id=$id");
+  $result = mysqli_query($db, "delete from tb_peserta where id_peserta=$id");
   if($result) {
     print "<div class='alert alert-success'>Data peserta berhasil dihapus</div>";
   } else {
@@ -36,16 +36,16 @@ if(!empty($id)) {
             $query = mysqli_query($db, "select * from tb_peserta where seksi != 'ADMINISTRATOR'");
             while ($row = mysqli_fetch_array($query)) { ?>
               <tr>
-                <td><?= $row['id'] ?></td>
+                <td><?= $row['id_peserta'] ?></td>
                 <td>
-                  <a href="?nav=ubah-peserta&id=<?= $row['id'] ?>">
+                  <a href="?nav=ubah-peserta&id=<?= $row['id_peserta'] ?>">
                     <?= $row['NIS'] ?>
                   </a>
                 </td>
                 <td><?= $row['nama'] ?></td>
                 <td><?= $row['seksi'] ?></td>
                 <td><?= $row['sekolah'] ?></td>
-                <td><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus-<?= $row['id'] ?>"><i class="fas fa-trash"></i></button></td>
+                <td><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus-<?= $row['id_peserta'] ?>"><i class="fas fa-trash"></i></button></td>
                 <div class="modal fade" id="hapus-<?= $row['id'] ?>">
                   <div class="modal-dialog">
                     <div class="modal-content">
@@ -57,7 +57,7 @@ if(!empty($id)) {
                       </div>
                       <div class="modal-footer">
                         <a href="#" data-bs-dismiss="modal" class="btn btn-dark">GA!</a>
-                        <a href="?nav=peserta&hapus=<?= $row['id'] ?>" class="btn btn-outline-danger">Yakin</a>
+                        <a href="?nav=peserta&hapus=<?= $row['id_peserta'] ?>" class="btn btn-outline-danger">Yakin</a>
                       </div>
                     </div>
                   </div>

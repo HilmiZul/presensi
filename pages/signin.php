@@ -13,6 +13,7 @@ if (isset($_POST['signin'])) {
   if ($count > 0) {
     $session = mysqli_fetch_assoc($result);
     $_SESSION['id_user'] = $session['id_user'];
+    $_SESSION['id_peserta'] = $session['id_peserta'];
     $_SESSION['user'] = $session['username'];
     $_SESSION['level'] = $session['level'];
     $_SESSION['nama'] = $session['nama'];

@@ -10,7 +10,7 @@ if (isset($_POST['kirim'])) {
 
   // buat query untuk menambahkan
   $query = "update tb_peserta set NIS='$nis', nama='$nama', seksi='$seksi', id_user=$id_user, sekolah='$sekolah'
-            where id=$id";
+            where id_peserta=$id";
 
   // eksekusi ke database
   $result = mysqli_query($db, $query);
@@ -25,7 +25,7 @@ if (isset($_POST['kirim'])) {
 
 
 $get_id = $_GET['id'];
-$query = mysqli_query($db, "select * from tb_peserta where id=$get_id");
+$query = mysqli_query($db, "select * from tb_peserta where id_peserta=$get_id");
 $data = mysqli_fetch_assoc($query);
 ?>
 <div class="row">
