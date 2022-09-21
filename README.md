@@ -19,14 +19,15 @@ Aplikasi Presensi untuk Pegawai KPPN Kota Tasikmalaya
     - [x] Logout
   - [x] Function `Users`
     - [x] Tambah
-    - [ ] Ubah
-    - [ ] Lihat
-    - [ ] Hapus
-  - [ ] Function `Peserta`
-    - [ ] Tambah
-    - [ ] Lihat
-    - [ ] Hapus
-  - [ ] Function Presensi
+    - [x] Ubah
+    - [x] Lihat
+    - [x] Hapus
+  - [x] Function `Peserta`
+    - [x] Tambah
+    - [x] Lihat
+    - [x] Ubah
+    - [x] Hapus
+  - [ ] Function `Presensi`
   - [ ] Function `Pengaturan`
     - [ ] Ubah
   - [ ] Function `Report`
