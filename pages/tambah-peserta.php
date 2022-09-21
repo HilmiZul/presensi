@@ -5,9 +5,10 @@ if (isset($_POST['kirim'])) {
   $nama = $_POST['nama'];
   $sekolah = $_POST['sekolah'];
   $seksi = $_POST['seksi'];
+  $id_user = $_POST['user'];
 
   // buat query untuk menambahkan
-  $query = "insert into tb_peserta values (NULL, '$nis', '$nama', '$sekolah', '$seksi')";
+  $query = "insert into tb_peserta values (NULL, '$nis', '$nama', '$seksi', '$id_user', '$sekolah')";
 
   // eksekusi ke database
   $result = mysqli_query($db, $query);
@@ -49,6 +50,16 @@ if (isset($_POST['kirim'])) {
               <option value="vera">Vera</option>
               <option value="bank">Bank</option>
               <option value="mski">Mski</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">User</label>
+            <select name="user" class="form-select" required>
+              <?php
+              $query = mysqli_query($db, "select * from tb_users"); 
+              while($row = mysqli_fetch_array($query)) {?>
+              <option value="<?=$row['id']?>"><?=$row['username']?></option>
+              <?php }?>
             </select>
           </div>
           <button type="submit" name="kirim" class="btn btn-dark">Simpan</button>
