@@ -31,3 +31,8 @@ Aplikasi Presensi untuk Peserta PKL di KPPN Kota Tasikmalaya
   - [ ] Function `Pengaturan`
     - [ ] Ubah
   - [ ] Function `Report`
+
+
+# Bugs
+- [x] Tanggal dan waktu (ubah type ke `varchar` alias `string`)
+- [x] redirect setelah ngisi presensi

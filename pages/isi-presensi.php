@@ -69,7 +69,7 @@
     var base64image = document.getElementById("webcam").src;
     Webcam.upload(base64image, '/pages/simpan-presensi.php', function(code, text) {
       alert('Berhasil Mengambil Gambar');
-      document.location.href = "index.php"
+      document.location.href = "?nav=report"
     });
   }
 

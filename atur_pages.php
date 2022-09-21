@@ -57,3 +57,6 @@ else if($_GET['nav'] == "isi-presensi") {
 else if($_GET['nav'] == "simpan-presensi") {
   include("./pages/simpan-presensi.php");
 }
+else if($_GET['nav'] == "report") {
+  include("./pages/report.php");
+}
