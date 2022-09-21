@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: DB_PKL_KPPN
--- Generation Time: 2022-09-19 14:04:47.8230
+-- Generation Time: 2022-09-21 15:27:47.3040
 -- -------------------------------------------------------------
 
 
@@ -20,13 +20,14 @@
 
 DROP TABLE IF EXISTS `tb_peserta`;
 CREATE TABLE `tb_peserta` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id_peserta` int NOT NULL,
   `NIS` varchar(255) DEFAULT NULL,
   `nama` varchar(255) DEFAULT NULL,
   `seksi` varchar(255) DEFAULT NULL,
   `id_user` int DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `sekolah` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id_peserta`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `tb_presensi`;
 CREATE TABLE `tb_presensi` (
@@ -36,7 +37,7 @@ CREATE TABLE `tb_presensi` (
   `keterangan` tinyint(1) DEFAULT NULL,
   `foto` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `tb_users`;
 CREATE TABLE `tb_users` (
@@ -45,14 +46,23 @@ CREATE TABLE `tb_users` (
   `password` varchar(255) DEFAULT NULL,
   `level` varchar(7) DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO `tb_peserta` (`id`, `NIS`, `nama`, `seksi`, `id_user`) VALUES
-(1, '99221133', 'Mimi Hacti', 'Bank', 3);
+INSERT INTO `tb_peserta` (`id_peserta`, `NIS`, `nama`, `seksi`, `id_user`, `sekolah`) VALUES
+(1, '99221133', 'Mimi Hacti', 'Bank', 3, 'SMKN 4 Tasikmalaya'),
+(2, '999', 'ZUL HILMI', 'ADMINISTRATOR', 1, NULL),
+(8, '1122334455', 'Laila Sari', 'bank', 4, 'SMKN 4 Tasikmalaya');
+
+INSERT INTO `tb_presensi` (`id`, `id_peserta`, `waktu`, `keterangan`, `foto`) VALUES
+(1, 8, '2022-09-21 15:11:12', 1, '2022.09.21 - 08.11.12am .jpeg'),
+(2, 8, '2022-09-21 15:12:30', 1, '2022.09.21 - 08.12.30am .jpeg'),
+(3, 8, '2022-09-21 15:15:26', 1, '2022.09.21 - 08.15.26am .jpeg'),
+(4, 8, '2022-09-21 15:16:11', 1, '2022.09.21 - 08.16.11am .jpeg');
 
 INSERT INTO `tb_users` (`id`, `username`, `password`, `level`) VALUES
 (1, 'zul', '356a192b7913b04c54574d18c28d46e6395428ab', 'admin'),
-(3, 'mimi', '356a192b7913b04c54574d18c28d46e6395428ab', 'pegawai');
+(3, 'mimi', '356a192b7913b04c54574d18c28d46e6395428ab', 'peserta'),
+(4, 'sari', '356a192b7913b04c54574d18c28d46e6395428ab', 'peserta');
 
 
 
