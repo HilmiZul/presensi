@@ -1,5 +1,5 @@
 <?php 
-$conn =mysqli_connect("localhost", "root", "", "webcam");
+$conn =mysqli_connect("127.0.0.1", "root", "passwd48", "DB_PKL_KPPN_cam");
 
 if(isset($_FILES["webcam"]["tmp_name"])){
     $tmpName = $_FILES["webcam"]["tmp_name"];
