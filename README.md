@@ -27,10 +27,10 @@ Aplikasi Presensi untuk Peserta PKL di KPPN Kota Tasikmalaya
     - [x] Lihat
     - [x] Ubah
     - [x] Hapus
-  - [ ] Function `Presensi`
+  - [x] Function `Presensi`
+  - [x] Function `Report`
   - [ ] Function `Pengaturan`
     - [ ] Ubah
-  - [ ] Function `Report`
 
 
 # Bugs
