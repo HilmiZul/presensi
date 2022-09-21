@@ -25,10 +25,7 @@ if (isset($_POST['kirim'])) {
   <div class="col-md-6">
     <div class="card mt-3">
       <div class="card-header">
-        <h3>
-          Tambah Peserta
-          <a href="?nav=peserta" class="btn btn-danger">kembali</a>
-        </h3>
+        <h3>Tambah Peserta</h3>
       </div>
       <div class="card-body">
         <form action="" method="post">
@@ -66,6 +63,7 @@ if (isset($_POST['kirim'])) {
             </select>
           </div>
           <button type="submit" name="kirim" class="btn btn-dark">Simpan</button>
+          <a href="?nav=peserta" class="btn btn-danger">kembali</a>
         </form>
       </div>
     </div>

@@ -44,6 +44,7 @@ if (isset($_POST['kirim'])) {
             </select>
           </div>
           <button type="submit" name="kirim" class="btn btn-dark">Simpan</button>
+          <a href="?nav=user" class="btn btn-danger">kembali</a>
         </form>
       </div>
     </div>

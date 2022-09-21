@@ -23,9 +23,30 @@ else if($_GET['nav'] == "tambah-peserta") {
     header("Location: /");
   }
 }
+else if($_GET['nav'] == "ubah-peserta") {
+  if($_SESSION['level'] == 'admin') {
+    include('./pages/ubah-peserta.php');
+  } else {
+    header("Location: /");
+  }
+}
+else if($_GET['nav'] == "user") {
+  if($_SESSION['level'] == 'admin') {
+    include('./pages/users.php');
+  } else {
+    header("Location: /");
+  }
+}
 else if($_GET['nav'] == "tambah-user") {
   if($_SESSION['level'] == 'admin') {
     include('./pages/tambah-user.php');
+  } else {
+    header("Location: /");
+  }
+}
+else if($_GET['nav'] == "ubah-user") {
+  if($_SESSION['level'] == 'admin') {
+    include('./pages/ubah-user.php');
   } else {
     header("Location: /");
   }
