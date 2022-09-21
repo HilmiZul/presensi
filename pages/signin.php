@@ -29,6 +29,10 @@ if (isset($_POST['signin'])) {
 <style>
   body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    display: table;
+    justify-content: center;
+    align-items: baseline;
   }
 
   /* Full-width input fields */
@@ -173,9 +177,11 @@ if (isset($_POST['signin'])) {
   }
 </style>
 
-<h2>ABSENSI KPPN TASIKMALAYA</h2>
+<h2>PRESENSI KPPN TASIKMALAYA</h2>
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<div>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+</div>
 
 <div id="id01" class="modal">
 

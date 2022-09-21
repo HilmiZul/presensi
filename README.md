@@ -1,5 +1,5 @@
-# PRESENSI PEGAWAI KPPN
-Aplikasi Presensi untuk Pegawai KPPN Kota Tasikmalaya
+# PRESENSI PESERTA PKL
+Aplikasi Presensi untuk Peserta PKL di KPPN Kota Tasikmalaya
 
 -Tim Mazjunun
 
