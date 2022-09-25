@@ -201,11 +201,6 @@ if (isset($_POST['signin'])) {
 
       <button type="submit" name="signin">Login</button>
     </div>
-    <!-- 
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">PIN?</a></span>
-      </div> -->
   </form>
 </div>
 
